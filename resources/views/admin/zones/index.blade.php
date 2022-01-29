@@ -46,7 +46,7 @@
                                     <td>{{$files_row->name}}</td>
                                     <td>
                                         @if($files_row->file != null)
-                                        <a class="btn btn-primary btn-circle"><i class="fa fa-eye"></i></a>
+                                        <a href="{{$files_row->file}}" target="_blank" class="btn btn-primary btn-circle"><i class="fa fa-eye"></i></a>
                                         @else
                                             <a class="btn btn-danger btn-circle"><i class="fa fa-eye"></i></a>
                                         @endif
