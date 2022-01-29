@@ -10,4 +10,11 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public static function uploadImage($file, $dir)
+    {
+        $image = time() . uniqid() . '.' . $file->getClientOriginalExtension();
+        $file->move('uploads' . '/' . $dir, $image);
+        return $image;
+    }
 }

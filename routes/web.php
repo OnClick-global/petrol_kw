@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\ZonesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('welcome');
     });
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+    Route::get('/zones/{id}', [ZonesController::class, 'show'])->name('zones');
+    Route::post('/zones/update/{id}', [ZonesController::class, 'update'])->name('zone_file.update');
     Route::get('/sketr', function () {
         return view('sketr');
     });
