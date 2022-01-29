@@ -65,6 +65,38 @@
                                 </tbody>
                             </table>
                             @else
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">file</th>
+                                        <th scope="col">change file</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>{{$row->name}}</td>
+                                            <td>
+                                                @if($row->file != null)
+                                                    <a href="{{$row->file}}" target="_blank" class="btn btn-primary btn-circle"><i class="fa fa-eye"></i></a>
+                                                @else
+                                                    <a class="btn btn-danger btn-circle"><i class="fa fa-eye"></i></a>
+                                                @endif
+                                            </td>
+                                            <form action="{{route('zone_file.update',$row->id)}}" method="post" enctype="multipart/form-data">
+                                                @csrf
+                                                <td>
+                                            <span class="label label-inline label-light-primary font-weight-bold">
+                                                <input required type="file" name="file">
+                                                <button type="submit" class="btn btn-success">save</button>
+                                            </span>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             @endif
                         </div>
                         @endforeach

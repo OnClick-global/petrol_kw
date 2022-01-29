@@ -12,8 +12,10 @@ class Zone_file extends Model
     public function getFileAttribute($image)
     {
         if (!empty($image)) {
-            return asset('uploads/client') . '/' . $image;
+            return asset('uploads/zone_files') . '/' . $image;
+        }else{
+            return null ;
         }
-        return asset('uploads/default.jpg');
+//        return asset('uploads/default.jpg');
     }
 }
