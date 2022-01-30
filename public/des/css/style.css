@@ -526,3 +526,14 @@ img.kerp {
     top: 35px;
     font-weight: 900;
 }
+
+.date {
+    display: inline-block;
+    position: relative;
+}
+.date span {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    font-weight: 900;
+}

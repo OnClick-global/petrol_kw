@@ -13,10 +13,13 @@
                 <img src="{{url('/des')}}/img/zone.png">
                 <img src="{{url('/des')}}/img/Picture12.jpg">
                 <img src="{{url('/des')}}/img/Picture9.png">
-                <img src="{{url('/des')}}/img/Picture11.png">
+                <div class="date">
+                    <img src="{{url('/des')}}/img/Picture11.png">
+                    <span>ToDay</span>
+                </div>
                 <div class="progress">
                     <img src="{{url('/des')}}/img/Picture1.png">
-                    <span>{{$zone->progress}}</span>
+                    <span>{{$zone->progress}}%</span>
                 </div>
             </div>
         </header>
