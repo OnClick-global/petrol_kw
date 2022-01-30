@@ -368,15 +368,12 @@ ul.black li a{
 .Sectionright {
     float: right;
     width: 50%;
-    height: 82%;
     padding-left: 14px;
     padding-top: 20px;
     position: relative;
 }
 
-.Sectionright img {
-    position: fixed;
-}
+.Sectionright img {height: 50%;}
 
 body.containerZone {
     /* overflow-y: hidden; */
