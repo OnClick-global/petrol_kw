@@ -445,7 +445,7 @@ footer img {
 }
 
 ul li {
-    line-height: 50px;
+    line-height: 35px;
 }
 
 img.koc {
@@ -545,4 +545,8 @@ img.kerp {
 header > img {
     width: 500px;
     margin: 10px 0;
+}
+
+.Sectionleft ul {
+    margin: 0 0;
 }
