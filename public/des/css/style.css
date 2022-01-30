@@ -421,7 +421,6 @@ body.containerZone {
     margin: 100px 20px;
     display: inline-grid;
     text-align: center;
-    padding: 0 134px;
     color: black;
     position: relative;
 }
@@ -440,6 +439,7 @@ footer img {
   padding-top: 132px;
   font-weight: 900;
   color: black;
+  padding: 132px 0 0 22px;
 }
 
 ul li {
