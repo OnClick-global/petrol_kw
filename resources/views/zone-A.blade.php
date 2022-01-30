@@ -11,7 +11,7 @@
             <div class="right">
                 <img src="{{url('/des')}}/img/Picture8.jpg">
                 <img src="{{url('/des')}}/img/zone.png">
-                <img src="{{url('/des')}}/img/Picture12.jpg">
+                <img src="{{url('/des')}}/img/Untitled-1.png">
                 <img src="{{url('/des')}}/img/Picture9.png">
                 <div class="date">
                     <img src="{{url('/des')}}/img/Picture11.png">
@@ -24,7 +24,7 @@
             </div>
         </header>
         <div class="banner">
-            <img src="{{url('/des')}}/img/00.jpg">
+            <img src="{{url('/des')}}/img/Untitled-3.png">
         </div>
         <div class="containerSketr">
             @php
