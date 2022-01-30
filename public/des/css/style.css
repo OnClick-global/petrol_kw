@@ -313,7 +313,7 @@ header {
 .containerSketr{
     width: 100%;
     margin: 0 auto;
-    padding: 0 170px;
+    padding: 6px 170px;
 }
 .Sectionleft {
     width: 50%;
@@ -369,11 +369,11 @@ ul.black li a{
     float: right;
     width: 50%;
     padding-left: 14px;
-    padding-top: 20px;
+    padding-top: 1px;
     position: relative;
 }
 
-.Sectionright img {height: 50%;}
+.Sectionright img {height: 60%;}
 
 body.containerZone {
     /* overflow-y: hidden; */
@@ -541,7 +541,7 @@ img.kerp {
 
 header > img {
     width: 500px;
-    margin: 10px 0;
+    margin: 40px 0;
 }
 
 .Sectionleft ul {
