@@ -318,6 +318,8 @@ header {
 .Sectionleft {
     width: 50%;
     display: inline-block;
+    position: relative;
+    left: 130px;
 }
 .Sectionleft h3 {
     background: #33cc33;
@@ -378,6 +380,7 @@ ul.black li a{
 body.containerZone {
     /* overflow-y: hidden; */
     /* overflow-x: hidden; */
+    background: url(../img/pageborder.png);
 }
 
 .containerZone .left img,.containerZone .right img {
@@ -517,6 +520,7 @@ img.kerp {
 .progress {
     display: inline-block;
     position: relative;
+    padding-left: 200px;
 }
 
 .progress span {
