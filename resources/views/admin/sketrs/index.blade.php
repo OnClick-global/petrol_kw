@@ -61,7 +61,7 @@
                                                     @csrf
                                                     <td>
                                             <span class="label label-inline label-light-primary font-weight-bold">
-                                                <input required type="text" name="file">
+                                                <input required type="text" value="{{$files_row->name}}" name="file">
                                                 <button type="submit" class="btn btn-success">save</button>
                                             </span>
                                                     </td>
@@ -97,7 +97,7 @@
                                                 @csrf
                                                 <td>
                                             <span class="label label-inline label-light-primary font-weight-bold">
-                                                <input required type="text" name="file">
+                                                <input required type="text" value="{{$row->file}}" name="file">
                                                 <button type="submit" class="btn btn-success">save</button>
                                             </span>
                                                 </td>
