@@ -16,8 +16,7 @@ class Sketer_file extends Model
         if (!empty($image)) {
             return asset('uploads/sketrs_files') . '/' . $image;
         }else{
-            return null ;
+            return "javascript:;" ;
         }
-//        return asset('uploads/default.jpg');
     }
 }
