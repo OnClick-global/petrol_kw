@@ -9,14 +9,4 @@ class Sketer_file extends Model
 {
     use HasFactory;
     protected $guarded = [];
-
-
-    public function getFileAttribute($image)
-    {
-        if (!empty($image)) {
-            return asset('uploads/sketrs_files') . '/' . $image;
-        }else{
-            return "javascript:;" ;
-        }
-    }
 }
