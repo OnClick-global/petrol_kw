@@ -542,7 +542,7 @@ img.kerp {
     color: red;
 }
 
-header img {
+header > img {
     width: 500px;
     margin: 10px 0;
 }
