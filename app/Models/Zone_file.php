@@ -15,8 +15,11 @@ class Zone_file extends Model
         if (!empty($image)) {
             return asset('uploads/zone_files') . '/' . $image;
         }else{
-            return null ;
+            return "javascript:;" ;
         }
-//        return asset('uploads/default.jpg');
+    }
+    public function Childs()
+    {
+        return $this->hasMany('App\Models\Zone_file','parent_id');
     }
 }

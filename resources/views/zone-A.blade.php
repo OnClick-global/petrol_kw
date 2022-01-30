@@ -22,10 +22,17 @@
                 $zoneA_Files = App\Models\Zone::find(1)->ZoneFiles()->whereNull('parent_id')->get()
             @endphp
             @foreach($zoneA_Files as $file)
-            <a href="#" class="three" style="background-color: {{$file->color}} ;">
-                <h3>{{$file->name}}</h3>
-                <img src="{{url('/des')}}/img/Picture16.png">
-            </a>
+            <div class="three" style="background-color: {{$file->color}} ;">
+                @if($file->Childs()->count() != 0)
+                    @foreach($file->Childs as $child)
+                        <div class="circle"><a href="{{$child->file}}">{{$child->name}}</a></div>
+                    @endforeach
+                @endif
+                <a href="{{$file->file}}" >
+                    <h3>{{$file->name}}</h3>
+                    <img src="{{url('/des')}}/img/Picture16.png">
+                </a>
+            </div>
             @endforeach
         </div>
         <footer>
