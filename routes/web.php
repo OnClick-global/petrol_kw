@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ZonesController;
+use App\Http\Controllers\Admin\SketrController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +22,15 @@ Route::middleware(['auth'])->group(function () {
         return view('welcome');
     });
     Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+    //zone
     Route::get('/zones/{id}', [ZonesController::class, 'show'])->name('zones');
     Route::post('/zones/update/{id}', [ZonesController::class, 'update'])->name('zone_file.update');
+    Route::post('/zones/update_progress/{id}', [ZonesController::class, 'update_progress'])->name('zone.update_progress');
+   //sketr
+    Route::get('/sketrs/{id}', [SketrController::class, 'show'])->name('sketrs');
+    Route::post('/sketr/update/{id}', [SketrController::class, 'update'])->name('sketr_file.update');
+
+    //front
     Route::get('/sketr', function () {
         return view('sketr');
     });

@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Sketer;
+use App\Models\Sketer_file;
 use App\Models\Zone;
 use App\Models\Zone_file;
 use Illuminate\Http\Request;
 
-class ZonesController extends Controller
+class SketrController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -48,10 +50,10 @@ class ZonesController extends Controller
      */
     public function show($id)
     {
-        $zone = Zone::whereId($id)->first();
-        $headers = Zone_file::where('parent_id',null)->where('zone_id',$id)->get();
-        $data = Zone_file::whereId('zone_id',$id)->get();
-        return view('admin.zones.index',compact('zone','headers','data'));
+        $zone = Sketer::whereId($id)->first();
+        $headers = Sketer_file::where('parent_id',null)->where('sketer_id',$id)->get();
+        $data = Sketer_file::whereId('sketer_id',$id)->get();
+        return view('admin.sketrs.index',compact('zone','headers','data'));
     }
 
     /**
@@ -79,24 +81,14 @@ class ZonesController extends Controller
                 'file' => 'required',
             ]);
         if ($request->file) {
-            $uploaded_file = $this->uploadImage($request->file, 'zone_files');
+            $uploaded_file = $this->uploadImage($request->file, 'sketrs_files');
         }
-        Zone_file::where('id',$id)->update([
+        Sketer_file::where('id',$id)->update([
             'file' => $uploaded_file,
         ]);
         return redirect()->back()->with('success', 'File updated');
     }
-    public function update_progress(Request $request, $id)
-    {
-        $data = $this->validate(\request(),
-            [
-                'progress' => 'required',
-            ]);
-        Zone::where('id',$id)->update([
-            'progress' => $request->progress,
-        ]);
-        return redirect()->back()->with('success', 'progress updated');
-    }
+
 
     /**
      * Remove the specified resource from storage.
