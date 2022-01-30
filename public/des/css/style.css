@@ -373,7 +373,7 @@ ul.black li a{
     position: relative;
 }
 
-.Sectionright img {height: 60%;/* float: right; */}
+.Sectionright img {height: 60%;}
 
 body.containerZone {
     /* overflow-y: hidden; */
