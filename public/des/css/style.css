@@ -13,8 +13,8 @@ body{
     box-sizing: border-box;
 }
 :root{
-    --mainWidth: 400px;
-    --mainHeight: 400px;
+    --mainWidth: 600px;
+    --mainHeight: 600px;
 }
 .container{
     width: var(--mainWidth);
@@ -27,7 +27,7 @@ body{
     position: relative;
     margin: 0 auto;
     padding: 0 0;
-    top: 245px;
+    top: 130px;
 }
 .Page{
     background: url('../img/Picture2.png') no-repeat;
