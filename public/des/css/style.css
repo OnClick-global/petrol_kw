@@ -419,7 +419,7 @@ body.containerZone {
     height: 50vh;
     border-radius: 100%;
     margin: 100px 20px;
-    display: inline-block;
+    display: inline-grid;
     text-align: center;
     padding: 0 134px;
     color: black;
@@ -450,4 +450,8 @@ img.koc {
 
 img.kerp {
     width: 300px;
+}
+
+.three img {
+    margin: 0 auto;
 }
