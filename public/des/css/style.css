@@ -217,7 +217,7 @@ body{
 
 }
 .sketr2 span{
-    transform: rotate(274deg)translate(-42% , calc(var(--mainWidth)*0.01));
+    transform: rotate(270deg)translate(-70% , -110%);
     transform-origin: center bottom;
     position: absolute;
     font-size: 12px;
