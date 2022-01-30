@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@php
+    $zone = App\Models\Zone::find(1);
+@endphp
 @section('content')
     <body class="containerZone">  
         <header>
@@ -11,7 +14,10 @@
                 <img src="{{url('/des')}}/img/Picture12.jpg">
                 <img src="{{url('/des')}}/img/Picture9.png">
                 <img src="{{url('/des')}}/img/Picture11.png">
-                <img src="{{url('/des')}}/img/Picture1.png">    
+                <div class="progress">
+                    <img src="{{url('/des')}}/img/Picture1.png">
+                    <span>{{$zone->progress}}</span>
+                </div>
             </div>
         </header>
         <div class="banner">
@@ -19,7 +25,7 @@
         </div>
         <div class="containerSketr">
             @php
-                $zoneA_Files = App\Models\Zone::find(1)->ZoneFiles()->whereNull('parent_id')->get()
+                $zoneA_Files = $zone->ZoneFiles()->whereNull('parent_id')->get()
             @endphp
             @foreach($zoneA_Files as $file)
             <div class="three" style="background-color: {{$file->color}} ;">

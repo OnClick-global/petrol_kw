@@ -514,3 +514,15 @@ img.kerp {
     padding: 25px 20px;
     overflow-wrap: anywhere;
 }
+
+.progress {
+    display: inline-block;
+    position: relative;
+}
+
+.progress span {
+    position: absolute;
+    right: 50px;
+    top: 35px;
+    font-weight: 900;
+}
