@@ -533,7 +533,9 @@ img.kerp {
 }
 .date span {
     position: absolute;
-    right: 40px;
-    top: 10px;
+    right: 10px;
+    top: 18px;
     font-weight: 900;
+    font-size: 14px;
+    color: red;
 }

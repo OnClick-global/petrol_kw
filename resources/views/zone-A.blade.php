@@ -15,7 +15,7 @@
                 <img src="{{url('/des')}}/img/Picture9.png">
                 <div class="date">
                     <img src="{{url('/des')}}/img/Picture11.png">
-                    <span>ToDay</span>
+                    <span>{{\Carbon\Carbon::parse(date(now()))->dayName;}}<br>{{\Carbon\Carbon::parse(date(now()))->toFormattedDateString();}}</span>
                 </div>
                 <div class="progress">
                     <img src="{{url('/des')}}/img/Picture1.png">
