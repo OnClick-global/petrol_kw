@@ -1,5 +1,5 @@
 body{
-  background: url('../img/pageborder.png');
+  /* background: url('../img/pageborder.png'); */
   background-size: 100% 100%;
   background-attachment: fixed;
   margin: 0;
@@ -34,7 +34,7 @@ body{
     background-size: 100% 100%;
     display: block;
     height: 95vh;
-    margin: 20px 20px;
+    /* margin: 20px 20px; */
 }
 .container1{
     width: calc(var(--mainWidth) - (var(--mainWidth)/3));
@@ -446,11 +446,11 @@ ul li {
 }
 
 img.koc {
-    width: 150px;
+    width: 120px;
 }
 
 img.kerp {
-    width: 300px;
+    width: 400px;
 }
 
 .three img {
