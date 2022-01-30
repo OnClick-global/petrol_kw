@@ -324,9 +324,11 @@ header {
     border: 2px solid white;
     border-radius: 10px;
     padding: 11px 10px;
+    font-size: 25px;
     width: 100%;
     color: white;
-    font-weight: 100;
+    font-weight: bolder;
+    margin: 0 0;
 }
 ul.red li a{
     
@@ -538,4 +540,9 @@ img.kerp {
     font-weight: 900;
     font-size: 14px;
     color: red;
+}
+
+header img {
+    width: 500px;
+    margin: 10px 0;
 }
