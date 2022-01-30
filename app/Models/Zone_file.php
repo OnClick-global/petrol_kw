@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Zone_file extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 
     public function getFileAttribute($image)
     {

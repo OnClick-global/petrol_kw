@@ -6,22 +6,7 @@
     </div>
 @endsection
 @section('content')
-    <div class="card card-custom">
-        <div class="card-header">
-            <div class="card-title">
-                <h3 class="card-label">Progress</h3>
-            </div>
-        </div>
-        <div class="card-body">
-            <form action="{{route('zone.update_progress',$zone->id)}}" method="post">
-                @csrf
-                <input class="form-control col-md-1" name="progress" value="{{$zone->progress}}">
-                <br>
-                <button class="btn btn-success">update</button>
-            </form>
-        </div>
-    </div>
-    <br>
+
     <div class="row">
         <div class="col-md-12">
             <div class="card card-custom">
@@ -45,7 +30,7 @@
                         @foreach($headers as $key => $row)
                             <div class="tab-pane fade @if($key == 0) active show @endif" id="kt_tab_pane_{{$row->id}}"
                                  role="tabpanel" aria-labelledby="kt_tab_pane_{{$row->id}}">
-                                @php $zone_data = \App\Models\Zone_file::where('parent_id',$row->id)->get();  @endphp
+                                @php $zone_data = \App\Models\Sketer_file::where('parent_id',$row->id)->get();  @endphp
                                 @if(count($zone_data) >0)
                                     <table class="table">
                                         <thead>
@@ -71,7 +56,7 @@
                                                                 class="fa fa-eye"></i></a>
                                                     @endif
                                                 </td>
-                                                <form action="{{route('zone_file.update',$files_row->id)}}"
+                                                <form action="{{route('sketr_file.update',$files_row->id)}}"
                                                       method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <td>
@@ -107,7 +92,7 @@
                                                     <a class="btn btn-danger btn-circle"><i class="fa fa-eye"></i></a>
                                                 @endif
                                             </td>
-                                            <form action="{{route('zone_file.update',$row->id)}}" method="post"
+                                            <form action="{{route('sketr_file.update',$row->id)}}" method="post"
                                                   enctype="multipart/form-data">
                                                 @csrf
                                                 <td>
