@@ -39,7 +39,7 @@
                 @endif
                 <a href="{{$file->file}}" >
                     <h3>{{$file->name}}</h3>
-                    <img src="{{url('/des')}}/img/Picture16.png">
+                    <img src="{{url('/des')}}/img/{{$file->icon}}">
                 </a>
             </div>
             @endforeach
