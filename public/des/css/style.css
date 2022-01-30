@@ -367,13 +367,13 @@ ul.black li a{
 }
 .Sectionright {
     float: right;
-    width: 50%;
+    width: 40%;
     padding-left: 14px;
     padding-top: 1px;
     position: relative;
 }
 
-.Sectionright img {height: 60%;}
+.Sectionright img {height: 60%;/* float: right; */}
 
 body.containerZone {
     /* overflow-y: hidden; */
