@@ -78,11 +78,8 @@ class ZonesController extends Controller
             [
                 'file' => 'required',
             ]);
-        if ($request->file) {
-            $uploaded_file = $this->uploadImage($request->file, 'zone_files');
-        }
         Zone_file::where('id',$id)->update([
-            'file' => $uploaded_file,
+            'file' => $request->file,
         ]);
         return redirect()->back()->with('success', 'File updated');
     }

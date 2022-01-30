@@ -76,7 +76,7 @@
                                                     @csrf
                                                     <td>
                                             <span class="label label-inline label-light-primary font-weight-bold">
-                                                <input required type="file" name="file">
+                                                <input required type="text" class="form-control" name="file">
                                                 <button type="submit" class="btn btn-success">save</button>
                                             </span>
                                                     </td>
@@ -111,10 +111,10 @@
                                                   enctype="multipart/form-data">
                                                 @csrf
                                                 <td>
-                                            <span class="label label-inline label-light-primary font-weight-bold">
-                                                <input required type="file" name="file">
-                                                <button type="submit" class="btn btn-success">save</button>
-                                            </span>
+                                                    <span class="label label-inline font-weight-bold">
+                                                        <input required type="text" class="form-control" name="file">
+                                                        <button type="submit" class="btn btn-success">save</button>
+                                                    </span>
                                                 </td>
                                             </form>
                                         </tr>
