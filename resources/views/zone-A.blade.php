@@ -11,7 +11,7 @@
                 <img src="{{url('/des')}}/img/Picture12.jpg">
                 <img src="{{url('/des')}}/img/Picture9.png">
                 <img src="{{url('/des')}}/img/Picture11.png">
-                <img src="{{url('/des')}}/img/Picture10.jpg">    
+                <img src="{{url('/des')}}/img/Picture1.jpg">    
             </div>
         </header>
         <div class="banner">
