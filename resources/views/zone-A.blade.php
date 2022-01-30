@@ -7,7 +7,7 @@
             </div>
             <div class="right">
                 <img src="{{url('/des')}}/img/Picture8.jpg">
-                <img src="{{url('/des')}}/img/Picture14.png">
+                <img src="{{url('/des')}}/img/zone.png">
                 <img src="{{url('/des')}}/img/Picture12.jpg">
                 <img src="{{url('/des')}}/img/Picture9.png">
                 <img src="{{url('/des')}}/img/Picture11.png">
