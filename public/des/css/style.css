@@ -1,7 +1,7 @@
 body{
   /* background: url('../img/pageborder.png'); */
-  background-size: 100% 100%;
-  background-attachment: fixed;
+  background-size: 100% 100% !important;
+  background-attachment: fixed !important;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -16,7 +16,7 @@ body{
     --mainWidth: 600px;
     --mainHeight: 600px;
 }
-.container{
+.contain{
     width: var(--mainWidth);
     height: var(--mainHeight);
     border-radius: 100%;
@@ -416,15 +416,16 @@ body.containerZone {
 }
 
 .three {
-    width: 30.33333%;
     background: #609fff;
-    height: 50vh;
     border-radius: 100%;
-    margin: 100px 20px;
-    display: inline-grid;
+    margin: 0px 0px;
     text-align: center;
     color: black;
     position: relative;
+    height: 300px;
+    width: 300px;
+    padding: 42px 0;
+    display: block;
 }
 footer {
     width: 100%;
@@ -438,10 +439,11 @@ footer img {
 .three h3 {
   text-align: center;
   vertical-align: middle;
-  padding-top: 132px;
   font-weight: 900;
   color: black;
-  padding: 132px 0 0 22px;
+  padding: 0px 22px 0px 22px;
+  font-size: 21px;
+  margin: 12px 0;
 }
 
 ul li {
@@ -458,6 +460,8 @@ img.kerp {
 
 .three img {
     margin: 0 auto;
+    height: 80px;
+    display: block;
 }
 
 .three .circle {
@@ -469,10 +473,12 @@ img.kerp {
 
 .three:hover .circle:nth-child(1) {left: -59px;background: #ffd966;color: black;width: 160px;height: 110px;border-radius: 20%;text-align: center;vertical-align: middle;visibility: inherit;padding: 25px 20px;}
 
-.three .circle a {
+.three a {
     color: black;
     font-weight: 800;
-
+    white-space: pre-line;
+    padding: 0 19px;
+    display: block;
 }
 .three:hover .circle:nth-child(2) {
     left: 114px;
@@ -517,13 +523,13 @@ img.kerp {
     overflow-wrap: anywhere;
 }
 
-.progress {
+.progres {
     display: inline-block;
     position: relative;
     padding-left: 200px;
 }
 
-.progress span {
+.progres span {
     position: absolute;
     right: 50px;
     top: 35px;
@@ -550,4 +556,8 @@ header > img {
 
 .Sectionleft ul {
     margin: 0 0;
+}
+
+.containerSketr .col-md-3 {
+    margin: 50px 0;
 }

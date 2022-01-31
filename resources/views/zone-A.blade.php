@@ -9,15 +9,13 @@
                 <img src="{{url('/des')}}/img/Picture7.png">
             </div>
             <div class="right">
-                <img src="{{url('/des')}}/img/Picture8.jpg">
-                <img src="{{url('/des')}}/img/zone.png">
-                <img src="{{url('/des')}}/img/Untitled-1.png">
+                <img src="{{url('/des')}}/img/ccc.png">
                 <img src="{{url('/des')}}/img/Picture9.png">
                 <div class="date">
                     <img src="{{url('/des')}}/img/Picture11.png">
                     <span>{{\Carbon\Carbon::parse(date(now()))->dayName;}}<br>{{\Carbon\Carbon::parse(date(now()))->toFormattedDateString();}}</span>
                 </div>
-                <div class="progress">
+                <div class="progres">
                     <img src="{{url('/des')}}/img/Picture1.png">
                     <span>{{$zone->progress}}%</span>
                 </div>
@@ -27,22 +25,35 @@
             <img src="{{url('/des')}}/img/Untitled-3.png">
         </div>
         <div class="containerSketr">
-            @php
-                $zoneA_Files = $zone->ZoneFiles()->whereNull('parent_id')->get()
-            @endphp
-            @foreach($zoneA_Files as $file)
-            <div class="three" style="background-color: {{$file->color}} ;">
-                @if($file->Childs()->count() != 0)
-                    @foreach($file->Childs as $child)
-                        <div class="circle"><a href="{{$child->file}}">{{$child->name}}</a></div>
-                    @endforeach
-                @endif
-                <a href="{{$file->file}}" >
-                    <h3>{{$file->name}}</h3>
-                    <img src="{{url('/des')}}/img/{{$file->icon}}">
-                </a>
+            <div class="container">
+                <div class="row">
+                    @php
+                        $zoneA_Files = $zone->ZoneFiles()->whereNull('parent_id')->get()
+                    @endphp
+                    @foreach($zoneA_Files as $file)
+                    <div class="col-md-3">                        
+                    <div class="three" style="background-color: {{$file->color}} ;">
+                        <div class="dropdown">
+                            <img src="{{url('/des')}}/img/{{$file->icon}}">
+                          <a class="dropdown-toggle" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{$file->name}}
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                            @if($file->Childs()->count() == 0)
+                                <li><a href="{{$file->file}}" class="dropdown-item active">{{$file->name}}</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                            @else
+                                @foreach($file->Childs as $child)
+                                    <li><a class="dropdown-item" href="{{$child->file}}">{{$child->name}}</a></li>
+                                @endforeach
+                            @endif
+                          </ul>
+                        </div>  
+                    </div>
+                    </div>
+                    @endforeach        
+                </div>
             </div>
-            @endforeach
         </div>
         <footer>
             <img src="{{url('/des')}}/img/Picture19.png">

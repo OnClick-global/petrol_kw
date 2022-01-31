@@ -8,7 +8,7 @@
         <div class="left">
             <img class="koc" src="{{url('des/')}}/img/KOC_Logo_for_wikipedia.png">
         </div>
-        <div class="container middle">
+        <div class="contain middle">
             <div class="center">
                 
             </div>
