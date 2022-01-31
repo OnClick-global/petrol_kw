@@ -434,7 +434,9 @@ footer {
 }
 footer img {
     width: 440px;
-    float: right;
+    float: left;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 .three h3 {
   text-align: center;
