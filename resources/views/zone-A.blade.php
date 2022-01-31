@@ -10,8 +10,8 @@
             </div>
             <div class="right">
                 <img src="{{url('/des')}}/img/ccc.png">
-                <img src="{{url('/des')}}/img/Picture9.png">
                 <div class="date">
+                    <img src="{{url('/des')}}/img/Picture9.png">
                     <img src="{{url('/des')}}/img/Picture11.png">
                     <span>{{\Carbon\Carbon::parse(date(now()))->dayName;}}<br>{{\Carbon\Carbon::parse(date(now()))->toFormattedDateString();}}</span>
                 </div>
