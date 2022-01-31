@@ -40,7 +40,7 @@
                           </a>
                           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                             @if($file->Childs()->count() == 0)
-                                <li><a href="{{$file->file}}" class="dropdown-item active">{{$file->name}}</a></li>
+                                <li><a href="{{$file->file}}" class="dropdown-item">{{$file->name}}</a></li>
                                 <li><hr class="dropdown-divider"></li>
                             @else
                                 @foreach($file->Childs as $child)

@@ -528,7 +528,6 @@ img.kerp {
 .progres {
     display: inline-block;
     position: relative;
-    padding-left: 200px;
 }
 
 .progres span {
@@ -541,6 +540,7 @@ img.kerp {
 .date {
     display: inline-block;
     position: relative;
+    padding-left: 200px;
 }
 .date span {
     position: absolute;
